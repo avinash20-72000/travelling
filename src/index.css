@@ -4,7 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{html {
-  font-family: 'Raleway', sans-serif;
+:root{
+  --primary-dark: #5651e5;
+  --primary-light: #709dff;
 }
+
+@layer base {
+  html {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  body {
+    @apply font-[Poppins];
+  }
+
+  li {
+    @apply p-4;
+  }
+
+  h1{
+    @apply font-bold text-3xl md:text-4xl
+  }
+
+  h2{
+    @apply font-bold text-3xl
+  }
+
+  h3{
+    @apply font-bold text-xl
+  }
+
+  button{
+    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] font-bold text-white rounded-md
+  }
+
+  .icon{
+     color: var(--primary-dark);
+    @apply text-2xl cursor-pointer 
+  }
 }
