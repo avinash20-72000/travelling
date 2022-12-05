@@ -4,7 +4,7 @@ import { BiSearch } from 'react-icons/bi';
 import { Link } from "react-scroll";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import {FaFacebook,FaYoutube,FaInstagram,FaTwitter} from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -31,7 +31,7 @@ const Navbar = () => {
         },
     ];
     return (
-        <div className='h-20 flex items-center justify-between px-4 '>
+        <div className='w-full h-20 flex items-center justify-between px-4 absolute z-10 text-white '>
             <div className='ml-4'>
                 <h1 className='font-signature'>
                     BEACHES.
@@ -49,13 +49,18 @@ const Navbar = () => {
                 <BiSearch className='mr-2' size={20} />
                 <BsPerson size={20} />
             </div>
-            <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer pr-4 z-10'>
+            <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer z-10 '>
                 {nav ?
-                    <AiOutlineClose size={20} /> : <HiOutlineMenuAlt4 size={20} />}
+                    <AiOutlineClose className='text-black' size={20} /> : <HiOutlineMenuAlt4 size={20} />}
             </div>
             {
                 nav && (
-                    <ul className="md:hidden flex flex-col justify-center  h-screen w-full absolute top-0 left-1 px-4 py-7">
+                    <ul className="text-black  bg-gray-100/90  flex flex-col  h-screen w-full absolute top-0 left-0 px-4 py-5">
+                        <div className='ml-4'>
+                            <h1 className='font-signature'>
+                                BEACHES.
+                            </h1>
+                        </div>
                         {
                             links.map(({ id, link }) => (
                                 <li key={id} className='capitalize cursor-pointer  text-xl border-b'>
