@@ -4,7 +4,7 @@ import beachVid from '../assets/beachVid.mp4';
 
 const Hero = () => {
   return (
-    <div className='w-full h-screen relative'>
+    <div name="home" className='w-full h-screen relative'>
         <video className='w-full h-screen object-cover' src={beachVid} autoPlay loop muted/>
         <div className='absolute h-full w-full left-0 top-0 bg-gray-900/30'>
             <div className='absolute top-0 w-full h-full  flex flex-col  justify-center text-center text-white p-4'>

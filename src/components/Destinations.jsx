@@ -7,7 +7,7 @@ import Keywest from '../assets/keywest.jpg';
 
 const Destinations = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 text-center'>
+    <div name='destinations' className='max-w-[1240px] mx-auto py-16 px-4 text-center'>
       <h1>All-Inclusive Resorts</h1>
       <p>On the Caribbean's Best Beaches</p>
       <div className='grid grid-rows-none md:grid-cols-5 py-4 gap-2 md:gap-4'>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BsPerson } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { Link } from "react-scroll";
 import { AiOutlineClose } from "react-icons/ai";
@@ -31,7 +30,7 @@ const Navbar = () => {
         },
     ];
     return (
-        <div className='w-full h-20 flex items-center justify-between px-4 absolute z-10 text-white '>
+        <div className='w-full h-20 flex items-center justify-between px-4 fixed z-10 text-white bg-gradient-to-b from-blue-600 to-transparent '>
             <div className='ml-4'>
                 <h1 className='font-signature'>
                     BEACHES.
@@ -40,14 +39,13 @@ const Navbar = () => {
 
             <ul className='hidden md:flex'>
                 {links.map(({ id, link }) => (
-                    <li key={id} className='capitalize cursor-pointer text-xl'>
-                        <Link to={link}>{link}</Link>
+                    <li key={id} className='capitalize cursor-pointer text-xl hover:scale-105 duration-200'>
+                        <Link to={link} smooth duration={500}>{link}</Link>
                     </li>
                 ))}
             </ul>
             <div className='hidden md:flex cursor-pointer'>
                 <BiSearch className='mr-2' size={20} />
-                <BsPerson size={20} />
             </div>
             <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer z-10 '>
                 {nav ?
@@ -72,7 +70,7 @@ const Navbar = () => {
                         }
                         <div className='flex flex-col '>
                             <button className='my-6'>Search</button>
-                            <button>Account</button>
+                            {/* <button>Account</button> */}
                         </div>
                         <div className='flex justify-between py-6 '>
                             <FaFacebook className='icon' />
